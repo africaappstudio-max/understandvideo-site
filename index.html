@@ -83,6 +83,7 @@ details ol{color:var(--grey);margin:12px 0 0;padding-left:22px}details li{margin
 .legal h2{font-size:28px;letter-spacing:-.02em}
 .legal p,.legal li{color:var(--grey);font-size:15px}
 .legal li{margin-bottom:8px}
+.legal h3{font-size:19px;margin:28px 0 8px}
 footer{background:var(--card);color:var(--grey);font-size:12px;padding:30px 0}
 footer a{color:var(--grey);margin-right:18px;text-decoration:none}
 footer a:hover{text-decoration:underline}
@@ -162,7 +163,7 @@ footer p{margin:8px 0}
 
 
 <section id="how"><div class="wrap">
-<div class="sec-head reveal"><h2>How it works.</h2><p class="lead">Three steps. Everything happens on your computer.</p></div>
+<div class="sec-head reveal"><h2>How it works.</h2><p class="lead">Three steps. The video is processed on your computer.</p></div>
 <div class="grid g3">
 <div class="card step reveal">
 <div class="ico"><svg width="120" height="72" viewBox="0 0 120 72" aria-hidden="true"><rect x="10" y="20" width="100" height="48" rx="10" fill="none" stroke="#c7c7cc" stroke-width="2" stroke-dasharray="5 5"/><rect x="40" y="4" width="40" height="44" rx="6" fill="#fff" stroke="#d2d2d7"/><rect x="45" y="9" width="30" height="20" rx="3" fill="#e2e9f3"/><path d="M57 14v10l8-5z" fill="#fff"/><rect x="47" y="34" width="26" height="3" rx="1.5" fill="#1d1d1f"/><rect x="51" y="40" width="18" height="3" rx="1.5" fill="#c7c7cc"/><path d="M60 52v10m-5-5 5 5 5-5" stroke="#1d1d1f" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
@@ -172,7 +173,7 @@ footer p{margin:8px 0}
 <span class="n">2</span><h3>Frames and every word</h3><p>ffmpeg pulls the key frames and faster-whisper transcribes every word with timestamps, all on your computer. Nothing is uploaded.</p></div>
 <div class="card step reveal">
 <div class="ico"><svg width="130" height="72" viewBox="0 0 130 72" aria-hidden="true"><rect x="52" y="6" width="70" height="22" rx="11" fill="#1d1d1f"/><rect x="62" y="15" width="44" height="4" rx="2" fill="#fff"/><rect x="8" y="36" width="88" height="30" rx="12" fill="#f5f5f7"/><rect x="18" y="45" width="64" height="4" rx="2" fill="#86868b"/><rect x="18" y="54" width="44" height="4" rx="2" fill="#86868b"/></svg></div>
-<span class="n">3</span><h3>Your AI understands it</h3><p>Claude Desktop, Cursor or Grok Bot now actually understands the video, so it can explain, summarize and answer questions.</p></div>
+<span class="n">3</span><h3>Your AI understands it</h3><p>Claude Desktop, Cursor or Grok Bot now actually understands the video, so it can explain, summarize and answer questions. If your assistant uses a cloud AI model, it sends the frames and transcript to that provider under its own terms.</p></div>
 </div>
 <div class="panel reveal"><video class="vid" autoplay muted loop playsinline preload="none" poster="demo-poster.jpg" width="960" height="600" aria-label="Screen recording: Claude can't answer a question about a video on its own, then answers it correctly with Understand This Video For Me"><source src="demo.webm" type="video/webm"><source src="demo.mp4" type="video/mp4"><img src="how.webp" width="720" height="450" alt="A video is dropped in, frames and a transcript appear, then the AI answers"></video><p class="credit">Test video: cooking tips by The Babbling Brooke (Brooke Marie Bridges), used under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY</a>.</p></div>
 <p class="note small reveal">Setup is quick: <a href="#install">install the plugin</a> and enter your license key once.</p>
@@ -239,7 +240,7 @@ footer p{margin:8px 0}
 <div class="sec-head reveal"><h2>Questions.</h2></div>
 <div class="reveal">
 <details><summary>What is Understand This Video For Me AI Plugin?</summary><p>It's the AI plugin that watches and listens to videos for you. It gives Claude Desktop, Cursor or Grok Bot the key frames and a timestamped transcript of any video on your computer, so your AI can explain it, summarize it and answer questions about it.</p></details>
-<details><summary>Are my videos uploaded anywhere?</summary><p>No. Frames and transcripts are created locally on your computer. We never receive your videos.</p></details>
+<details><summary>Are my videos uploaded anywhere?</summary><p>No. Frames and transcripts are created locally on your computer. The plugin never uploads your video and never contacts any AI provider. We never receive your video or anything made from it.</p><p>The plugin hands the frames and transcript to the AI assistant you choose (Claude Desktop, Cursor, Grok Bot and others). If that assistant uses a cloud AI model, for example from Anthropic, OpenAI or xAI, your assistant sends that content to the provider, and it is handled under that provider's terms and privacy policy. <a href="/privacy">Full Privacy Policy</a>.</p></details>
 <details><summary>Is it a subscription?</summary><p>No. You pay $49 once and keep your license for life.</p></details>
 <details><summary>What do I need?</summary><p>A computer running Claude Desktop, Cursor, Grok Bot or another app that supports MCP plugins. A browser version for ChatGPT, Claude and Grok on the web is coming soon.</p></details>
 <details><summary>Can I get a refund?</summary><p>No refunds for change of mind. Please watch the demo before you buy, so you know exactly what you get.</p><p>You get a refund only if all three are true: it won't install or run on your computer, you email <a href="mailto:video@shipmonthly.com">video@shipmonthly.com</a> within 7 days of buying, and I can't fix it within 48 hours. When you're refunded, your license is switched off.</p><p>No refunds for "I changed my mind", "I didn't like it" or "I didn't need it".</p><p>The charge shows as FREEMIUS on your bank statement. Any problem, email first.</p></details>
@@ -260,12 +261,31 @@ footer p{margin:8px 0}
 
 <section id="privacy" class="legal"><div class="wrap narrow">
 <h2>Privacy Policy</h2>
+<p class="small">Last updated 15 November 2026</p>
+<h3>On your computer</h3>
 <ul>
-<li>Understand This Video For Me AI Plugin processes your videos locally on your computer. We never upload, receive or store them.</li>
-<li>License checks send only your license key and an instance ID to Freemius to confirm your license is valid.</li>
+<li>Understand This Video For Me AI Plugin processes your videos locally. ffmpeg extracts the key frames and audio, and faster-whisper turns speech into a transcript, all on your computer.</li>
+<li>Your original video file is never uploaded by us. We never receive, see or store your videos, frames or transcripts.</li>
+<li>The plugin itself sends nothing to any AI provider. It makes no requests to OpenAI, Anthropic, Google, xAI or any other AI service.</li>
+</ul>
+<h3>Your chosen AI assistant</h3>
+<ul>
+<li>The plugin hands its results (key frames, one overview image, the transcript and a timeline) to the AI assistant you choose and run, such as Claude Desktop, Cursor or Grok Bot.</li>
+<li>If that assistant uses a cloud AI model, for example from Anthropic, OpenAI or xAI, your assistant sends that content to the provider. It is then processed under that provider's terms and privacy policy, not ours. If your assistant uses a model on your own computer, it stays on your computer.</li>
+</ul>
+<h3>The only network connections the plugin makes</h3>
+<ul>
+<li>Video links: if you give a link (YouTube, Vimeo, Loom and others), the plugin downloads the video or its captions straight from that site to your computer.</li>
+<li>Speech model: the first time it transcribes, faster-whisper downloads the free Whisper speech model once (from Hugging Face). No audio or video is sent.</li>
+<li>License: activation and an occasional re-check send only your license key, a device ID and your device name to Freemius, our licensing provider. No video content is sent.</li>
+<li>No analytics, no tracking, no ads.</li>
+</ul>
+<h3>Purchases and your data</h3>
+<ul>
 <li>When you buy, Freemius processes your name, email and payment details to complete the purchase and send your license. We use your email only for license and support matters.</li>
 <li>We do not sell your data. For questions or data requests (access, correction, deletion), email <a href="mailto:video@shipmonthly.com">video@shipmonthly.com</a>.</li>
-</ul></div></section>
+</ul>
+</div></section>
 
 <section id="refund" class="legal"><div class="wrap narrow">
 <h2>Refund Policy</h2>
