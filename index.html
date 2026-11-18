@@ -225,14 +225,14 @@ footer p{margin:8px 0}
 <div class="sec-head reveal"><h2>Set it up.</h2><p class="lead">Pick your app. Works on Mac and Windows.</p></div>
 <div class="reveal">
 <details open><summary>Step 1 (everyone): run the installer once</summary>
-<p><b>Mac</b></p><ol><li>Open <a href="https://github.com/africaappstudio-max/understand-this-video-mcp" target="_blank" rel="noopener">the download page</a>, click the green <b>Code</b> button, then <b>Download ZIP</b>. Double-click the ZIP to unzip it.</li><li>Open <b>Terminal</b> (press Cmd+Space, type Terminal, press Enter). Type <code>cd </code> with a space, drag the unzipped folder into the window, press Enter.</li><li>Type <code>bash install.sh</code>, press Enter, and paste your license key when asked.</li></ol>
-<p><b>Windows</b></p><ol><li>Same download. Right-click the ZIP and choose <b>Extract All</b>.</li><li>Open the folder, right-click <code>install.ps1</code>, choose <b>Run with PowerShell</b>.</li><li>Paste your license key when asked.</li></ol>
+<p><b>Mac</b></p><ol><li>Download <a href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.1.0/video-context-ai.zip" target="_blank" rel="noopener">version 1.1.0 (video-context-ai.zip)</a> and double-click it to unzip.</li><li>Open <b>Terminal</b> (press Cmd+Space, type Terminal, press Enter). Type <code>cd </code> with a space, drag the unzipped folder into the window, press Enter.</li><li>Type <code>bash install.sh</code>, press Enter, and paste your license key when asked.</li></ol>
+<p><b>Windows</b></p><ol><li>Download the same ZIP. Right-click it and choose <b>Extract All</b>.</li><li>Open the folder, right-click <code>install.ps1</code>, choose <b>Run with PowerShell</b>.</li><li>Paste your license key when asked.</li></ol>
 <p>This also sets up Claude Desktop and Cursor for you.</p></details>
-<details><summary>Claude Desktop</summary><ol><li>Do Step 1.</li><li>Fully quit Claude Desktop (Mac: Cmd+Q) and open it again.</li><li>Start a new chat and type: <code>Understand this video for me: https://www.youtube.com/watch?v=zLTDLeDRrw4</code>. Click <b>Allow</b> if Claude asks.</li></ol><p><b>Check it works:</b> Settings, Developer shows "Understand This Video For Me" as running.</p></details>
+<details><summary>Claude Desktop</summary><ol><li>Do Step 1.</li><li>Fully quit Claude Desktop (Mac: Cmd+Q) and open it again.</li><li>Start a new chat and type: <code>Understand this video for me: ~/Desktop/My Video.mp4</code>. Click <b>Allow</b> if Claude asks.</li></ol><p><b>Check it works:</b> Settings, Developer shows "Understand This Video For Me" as running.</p></details>
 <details><summary>Cursor</summary><ol><li>Do Step 1, then restart Cursor.</li><li>Open Cursor Settings (Cmd/Ctrl+Shift+J) and click <b>Tools &amp; MCP</b>.</li><li>In the Agent chat type: <code>Understand this video for me: /path/to/video.mp4</code>.</li></ol><p><b>Check it works:</b> "Understand This Video For Me" has a green dot.</p></details>
-<details><summary>Claude Code</summary><ol><li>Do Step 1.</li><li>In Terminal paste (Mac): <code>claude mcp add understand-this-video -- ~/.video-context/app/bin/understand-this-video-mcp</code></li><li>Start <code>claude</code> and ask about a video.</li></ol><p><b>Check it works:</b> <code>claude mcp list</code> shows it as Connected. Windows path and more apps are in the <a href="https://github.com/africaappstudio-max/understand-this-video-mcp#install-pick-your-app" target="_blank" rel="noopener">full guide</a>.</p></details>
-<details><summary>Grok Bot</summary><ol><li>Open a chat with your Bot.</li><li>Send the setup message from the <a href="https://github.com/africaappstudio-max/understand-this-video-mcp#grok-bot" target="_blank" rel="noopener">Grok Bot guide</a> (copy and paste, one message).</li><li>Enter your license key in the secure box the Bot shows. Never type it in the chat.</li></ol><p><b>Check it works:</b> ask "Which tools does Understand This Video For Me have?" Grok Bot works on video links and files you give it.</p></details>
-<details><summary>Windsurf, VS Code, LM Studio, Cline</summary><p>Do Step 1, then follow the short steps for your app in the <a href="https://github.com/africaappstudio-max/understand-this-video-mcp#windsurf-vs-code-lm-studio-cline" target="_blank" rel="noopener">full guide</a>.</p></details>
+<details><summary>Claude Code</summary><ol><li>Do Step 1.</li><li>In Terminal paste (Mac): <code>claude mcp add understand-this-video -- ~/.video-context/app/bin/understand-this-video-mcp</code></li><li>Start <code>claude</code> and ask about a video.</li></ol><p><b>Check it works:</b> <code>claude mcp list</code> shows it as Connected. Windows path and more apps are in the <a href="https://github.com/africaappstudio-max/video-context-ai-download#install-pick-your-app" target="_blank" rel="noopener">full guide</a>.</p></details>
+<details><summary>Grok Bot</summary><ol><li>Open a chat with your Bot.</li><li>Send the setup message from the <a href="https://github.com/africaappstudio-max/video-context-ai-download#grok-bot" target="_blank" rel="noopener">Grok Bot guide</a> (copy and paste, one message).</li><li>Enter your license key in the secure box the Bot shows. Never type it in the chat.</li></ol><p><b>Check it works:</b> ask "Which tools does Understand This Video For Me have?" Grok Bot works on video files you give it. It does not download videos from websites.</p></details>
+<details><summary>Windsurf, VS Code, LM Studio, Cline</summary><p>Do Step 1, then follow the short steps for your app in the <a href="https://github.com/africaappstudio-max/video-context-ai-download#windsurf-vs-code-lm-studio-cline" target="_blank" rel="noopener">full guide</a>.</p></details>
 </div>
 </div></section>
 
@@ -261,10 +261,10 @@ footer p{margin:8px 0}
 
 <section id="privacy" class="legal"><div class="wrap narrow">
 <h2>Privacy Policy</h2>
-<p class="small">Last updated 15 November 2026</p>
+<p class="small">Last updated 18 November 2026</p>
 <h3>On your computer</h3>
 <ul>
-<li>Understand This Video For Me AI Plugin processes your videos locally. ffmpeg extracts the key frames and audio, and faster-whisper turns speech into a transcript, all on your computer.</li>
+<li>Understand This Video For Me AI Plugin processes only video files already on your computer. ffmpeg extracts the key frames and audio, and faster-whisper turns speech into a transcript, all on your computer.</li>
 <li>Your original video file is never uploaded by us. We never receive, see or store your videos, frames or transcripts.</li>
 <li>The plugin itself sends nothing to any AI provider. It makes no requests to OpenAI, Anthropic, Google, xAI or any other AI service.</li>
 </ul>
@@ -275,7 +275,7 @@ footer p{margin:8px 0}
 </ul>
 <h3>The only network connections the plugin makes</h3>
 <ul>
-<li>Video links: if you give a link (YouTube, Vimeo, Loom and others), the plugin downloads the video or its captions straight from that site to your computer.</li>
+<li>No video downloads: the plugin only processes video files already on your computer. It does not download videos from websites. If you want a video from the internet processed, download or export it yourself first, then give the plugin the file path.</li>
 <li>Speech model: the first time it transcribes, faster-whisper downloads the free Whisper speech model once (from Hugging Face). No audio or video is sent.</li>
 <li>License: activation and an occasional re-check send only your license key, a device ID and your device name to Freemius, our licensing provider. No video content is sent.</li>
 <li>No analytics, no tracking, no ads.</li>
