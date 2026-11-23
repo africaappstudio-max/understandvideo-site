@@ -226,19 +226,17 @@ footer p{margin:8px 0}
 <p class="small" style="margin:8px auto 0;max-width:400px">The charge shows as FREEMIUS on your bank statement. Any problem, email first.</p>
 </div></div></section>
 
-<section id="install" style="padding-top:0"><div class="wrap narrow">
-<div class="sec-head reveal"><h2>Set it up.</h2><p class="lead">Pick your app. Works on Mac and Windows.</p></div>
-<div class="reveal">
-<details open><summary>Step 1 (everyone): run the installer once</summary>
-<p><b>Mac</b></p><ol><li>Download <a href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.2.0/video-context-ai.zip" target="_blank" rel="noopener">version 1.1.0 (video-context-ai.zip)</a> and double-click it to unzip.</li><li>Open <b>Terminal</b> (press Cmd+Space, type Terminal, press Enter). Type <code>cd </code> with a space, drag the unzipped folder into the window, press Enter.</li><li>Type <code>bash install.sh</code>, press Enter, and paste your license key when asked.</li></ol>
-<p><b>Windows</b></p><ol><li>Download the same ZIP. Right-click it and choose <b>Extract All</b>.</li><li>Open the folder, right-click <code>install.ps1</code>, choose <b>Run with PowerShell</b>.</li><li>Paste your license key when asked.</li></ol>
-<p>This also sets up Claude Desktop and Cursor for you.</p></details>
-<details><summary>Claude Desktop</summary><ol><li>Do Step 1.</li><li>Fully quit Claude Desktop (Mac: Cmd+Q) and open it again.</li><li>Start a new chat and type: <code>Understand this video for me: ~/Desktop/My Video.mp4</code>. Click <b>Allow</b> if Claude asks.</li></ol><p><b>Check it works:</b> Settings, Developer shows "Understand This Video For Me" as running.</p></details>
-<details><summary>Cursor</summary><ol><li>Do Step 1, then restart Cursor.</li><li>Open Cursor Settings (Cmd/Ctrl+Shift+J) and click <b>Tools &amp; MCP</b>.</li><li>In the Agent chat type: <code>Understand this video for me: /path/to/video.mp4</code>.</li></ol><p><b>Check it works:</b> "Understand This Video For Me" has a green dot.</p></details>
-<details><summary>Claude Code</summary><ol><li>Do Step 1.</li><li>In Terminal paste (Mac): <code>claude mcp add understand-this-video -- ~/.video-context/app/bin/understand-this-video-mcp</code></li><li>Start <code>claude</code> and ask about a video.</li></ol><p><b>Check it works:</b> <code>claude mcp list</code> shows it as Connected. Windows path and more apps are in the <a href="https://github.com/africaappstudio-max/video-context-ai-download#install-pick-your-app" target="_blank" rel="noopener">full guide</a>.</p></details>
-<details><summary>Grok Bot</summary><ol><li>Open a chat with your Bot.</li><li>Send the setup message from the <a href="https://github.com/africaappstudio-max/video-context-ai-download#grok-bot" target="_blank" rel="noopener">Grok Bot guide</a> (copy and paste, one message).</li><li>Enter your license key in the secure box the Bot shows. Never type it in the chat.</li></ol><p><b>Check it works:</b> ask "Which tools does Understand This Video For Me have?" Grok Bot works on video files you give it. It does not download videos from websites.</p></details>
-<details><summary>Windsurf, VS Code, LM Studio, Cline</summary><p>Do Step 1, then follow the short steps for your app in the <a href="https://github.com/africaappstudio-max/video-context-ai-download#windsurf-vs-code-lm-studio-cline" target="_blank" rel="noopener">full guide</a>.</p></details>
+<section id="install" style="padding-top:0"><div class="wrap">
+<div class="sec-head reveal"><h2>Set it up in 3 steps.</h2><p class="lead">No Terminal, no typing commands. Works on Mac and Windows.</p></div>
+<div class="grid g3">
+<div class="card step reveal"><span class="n">1</span><h3>Download the installer</h3><p>Pick your computer, then double-click the file you get.</p>
+<p style="margin-top:16px"><a class="btn sm" href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.2.1/Install-Understand-This-Video-Mac.zip">Download for Mac</a></p>
+<p style="margin-top:10px"><a class="btn sm" href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.2.1/Install-Understand-This-Video-Windows.bat">Download for Windows</a></p>
+<p class="small" style="margin-top:14px">Mac: if it says it can't be opened, right-click the file, choose <b>Open</b>, then <b>Open</b> again. Windows: if a blue box appears, click <b>More info</b>, then <b>Run anyway</b>.</p></div>
+<div class="card step reveal"><span class="n">2</span><h3>Paste your license key</h3><p>A small box pops up and asks for the key from your purchase email. Paste it and click OK. It installs everything else for you.</p></div>
+<div class="card step reveal"><span class="n">3</span><h3>Open your AI app</h3><p>Claude Desktop, Cursor, Claude Code, Windsurf and Gemini CLI are already connected. Quit and reopen the app, then ask: <i>Understand this video for me</i> and the file name.</p></div>
 </div>
+<p class="note small reveal" style="text-align:center;margin-top:24px">Using Grok Bot or another app, or something went wrong? See the <a href="help.html">help page</a>. Or email <a href="mailto:video@shipmonthly.com">video@shipmonthly.com</a>.</p>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap narrow">
