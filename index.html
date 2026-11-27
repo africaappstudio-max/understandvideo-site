@@ -138,6 +138,50 @@ footer p{margin:8px 0}
  .soon{flex-direction:column;align-items:flex-start;padding:24px}
  .sec-head{margin-bottom:36px}
 }
+
+/* how to install */
+.install-shell{background:var(--card);border-radius:28px;padding:28px 28px 36px;max-width:980px;margin:0 auto}
+.os-toggle{display:flex;gap:4px;background:#fff;border-radius:980px;padding:4px;width:fit-content;margin:0 auto 26px;border:1px solid var(--line)}
+.os-toggle button{appearance:none;border:0;background:transparent;padding:8px 22px;border-radius:980px;font:inherit;font-size:15px;font-weight:600;color:var(--grey);cursor:pointer}
+.os-toggle button[aria-selected="true"]{background:var(--ink);color:#fff}
+.pipe{list-style:none;display:flex;align-items:flex-start;justify-content:space-between;padding:20px 10px 14px;margin:0 0 22px;background:#fff;border-radius:20px}
+.pipe li{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;gap:8px}
+.pipe li:not(:last-child):after{content:"";position:absolute;top:13px;left:calc(50% + 18px);right:calc(-50% + 18px);height:2px;background:#e8e8ed;z-index:0}
+.pipe li.done:not(:last-child):after{background:#12a356}
+.pipe .dot{width:28px;height:28px;border-radius:50%;border:2px solid #d2d2d7;background:#fff;position:relative;z-index:1}
+.pipe li.done .dot{background:#e8f8ef;border-color:#b8e8cc}
+.pipe li.done .dot:after{content:"";position:absolute;left:8px;top:6px;width:8px;height:5px;border-left:2px solid #12a356;border-bottom:2px solid #12a356;transform:rotate(-45deg)}
+.pipe li.active .dot{border-color:#e8e8ed}
+.pipe li.active .dot:before{content:"";position:absolute;inset:-3px;border-radius:50%;border:2.5px solid transparent;border-top-color:var(--blue);animation:pipe-spin .8s linear infinite}
+@keyframes pipe-spin{to{transform:rotate(360deg)}}
+.pipe .lab{font-size:13px;font-weight:600;color:var(--grey);letter-spacing:-.01em;padding:0 4px}
+.pipe li.done .lab,.pipe li.active .lab{color:var(--ink)}
+.install-line{display:flex;align-items:center;gap:10px;background:#1d1d1f;border-radius:14px;padding:10px 10px 10px 16px;margin:0 0 18px;color:#fff}
+.install-line code{flex:1;font:13.5px/1.45 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;overflow-x:auto;white-space:nowrap;color:#f5f5f7}
+.install-line .copy{flex:none;border:0;background:#fff;color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:8px 14px;border-radius:980px;cursor:pointer}
+.install-line .copy:hover{background:#e8e8ed}
+.install-line .copy.ok{background:#12a356;color:#fff}
+.install-demo{display:block;width:100%;height:auto;border-radius:16px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);margin:0 0 8px}
+.howto{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:20px}
+.howto>li{background:#fff;border-radius:20px;padding:22px}
+.howto .hrow{display:flex;gap:14px;align-items:flex-start;margin:0 0 14px}
+.howto .n{flex:none;margin:0}
+.howto h3{margin:0 0 4px;font-size:19px}
+.howto p{margin:0;color:var(--grey);font-size:16px}
+.howto img{width:100%;border-radius:14px;border:1px solid #e8e8ed;background:var(--card)}
+.howto .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.howto .cap{color:var(--light);font-size:13px;margin:8px 0 0;text-align:center}
+.fallback{color:var(--light);font-size:14px;margin:22px 0 0;text-align:center}
+.fallback a{color:var(--grey)}
+@media (prefers-reduced-motion:reduce){.pipe li.active .dot:before{animation:none;border-top-color:#12a356}}
+@media (max-width:760px){
+ .install-shell{padding:18px 14px 24px;border-radius:22px}
+ .pipe{padding:16px 2px 10px}
+ .pipe .lab{font-size:11px}
+ .howto .pair{grid-template-columns:1fr}
+ .install-line{flex-wrap:wrap;padding:12px}
+ .install-line code{white-space:normal;word-break:break-all}
+}
 </style>
 </head>
 <body>
@@ -227,14 +271,84 @@ footer p{margin:8px 0}
 </div></div></section>
 
 <section id="install" style="padding-top:0"><div class="wrap">
-<div class="sec-head reveal"><h2>Set it up in 3 steps.</h2><p class="lead">No Terminal, no typing commands. Works on Mac and Windows.</p></div>
-<div class="grid g3">
-<div class="card step reveal"><span class="n">1</span><h3>Download the installer</h3><p>Pick your computer, then double-click the file you get.</p>
-<p style="margin-top:16px"><a class="btn sm" href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.2.1/Install-Understand-This-Video-Mac.zip">Download for Mac</a></p>
-<p style="margin-top:10px"><a class="btn sm" href="https://github.com/africaappstudio-max/video-context-ai-download/releases/download/v1.2.1/Install-Understand-This-Video-Windows.bat">Download for Windows</a></p>
-<p class="small" style="margin-top:14px">Mac: if it says it can't be opened, right-click the file, choose <b>Open</b>, then <b>Open</b> again. Windows: if a blue box appears, click <b>More info</b>, then <b>Run anyway</b>.</p></div>
-<div class="card step reveal"><span class="n">2</span><h3>Paste your license key</h3><p>A small box pops up and asks for the key from your purchase email. Paste it and click OK. It installs everything else for you.</p></div>
-<div class="card step reveal"><span class="n">3</span><h3>Open your AI app</h3><p>Claude Desktop, Cursor, Claude Code, Windsurf and Gemini CLI are already connected. Quit and reopen the app, then ask: <i>Understand this video for me</i> and the file name.</p></div>
+<div class="sec-head reveal"><h2>How to install.</h2><p class="lead">About two minutes. Your license key is in your purchase email.</p></div>
+<div class="install-shell reveal">
+<div class="os-toggle" role="tablist" aria-label="Choose your computer">
+<button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true" data-os="mac">Mac</button>
+<button type="button" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="false" data-os="win">Windows</button>
+</div>
+
+<div id="panel-mac" class="os-panel" role="tabpanel" data-os="mac" aria-labelledby="tab-mac">
+<ol class="pipe" data-pipe="mac" aria-hidden="true">
+<li class="done"><span class="dot"></span><span class="lab">Open Terminal</span></li>
+<li class="active"><span class="dot"></span><span class="lab">Paste the line</span></li>
+<li><span class="dot"></span><span class="lab">Paste your key</span></li>
+<li><span class="dot"></span><span class="lab">You're done</span></li>
+</ol>
+<div class="install-line">
+<code id="install-cmd">curl -fsSL https://understandvideo.shipmonthly.com/install.sh | bash</code>
+<button type="button" class="copy" data-copy="#install-cmd">Copy</button>
+</div>
+<video class="install-demo" autoplay muted loop playsinline poster="install-mac.jpg" width="1120" height="720" aria-label="A short walk-through: open Terminal, paste the install line, enter your license key, and see the All set message.">
+<source src="install-mac.mp4" type="video/mp4">
+<source src="install-mac.webm" type="video/webm">
+</video>
+<ol class="howto">
+<li>
+<div class="hrow"><span class="n">1</span><div><h3>Open Terminal</h3><p>Press <b>Cmd+Space</b>, type <b>Terminal</b>, and press Enter.</p></div></div>
+<img src="install-mac-1.webp" width="1400" height="900" loading="lazy" alt="The Mac Spotlight search bar with Terminal typed in, and the Terminal app highlighted.">
+</li>
+<li>
+<div class="hrow"><span class="n">2</span><div><h3>Paste the line and press Enter</h3><p>Click Copy above, paste it in the Terminal window, and press Enter. Leave the window open while it works. This takes a few minutes.</p></div></div>
+<img src="install-mac-2.webp" width="1400" height="900" loading="lazy" alt="A Terminal window with the install line pasted, ready to press Enter: curl -fsSL https://understandvideo.shipmonthly.com/install.sh | bash">
+</li>
+<li>
+<div class="hrow"><span class="n">3</span><div><h3>Paste your license key</h3><p>A box will pop up and ask for the key from your purchase email. Paste it and click OK.</p></div></div>
+<img src="install-mac-3.webp" width="1400" height="900" loading="lazy" alt="A Mac dialog titled Understand This Video Plugin asking you to paste your license key, with Skip and OK buttons.">
+</li>
+<li>
+<div class="hrow"><span class="n">4</span><div><h3>You're done</h3><p>When you see All set, quit and reopen your AI app (Claude, Cursor or the one you use), then ask: <i>Understand this video for me</i> and the file name.</p></div></div>
+<img src="install-mac-4.webp" width="1400" height="900" loading="lazy" alt="The success dialog: All set. Quit and reopen your AI app, then ask it to understand a video.">
+</li>
+</ol>
+<p class="fallback">Prefer a file? There is a <a href="https://github.com/africaappstudio-max/video-context-ai-download/releases/latest/download/Install-Understand-This-Video-Mac.zip">Mac installer</a>, but Apple often blocks it with a warning, so the line above is the reliable way.</p>
+</div>
+
+<div id="panel-win" class="os-panel" role="tabpanel" data-os="win" aria-labelledby="tab-win" hidden>
+<ol class="pipe" data-pipe="win" aria-hidden="true">
+<li class="done"><span class="dot"></span><span class="lab">Download</span></li>
+<li class="active"><span class="dot"></span><span class="lab">If a warning appears</span></li>
+<li><span class="dot"></span><span class="lab">Paste your key</span></li>
+<li><span class="dot"></span><span class="lab">You're done</span></li>
+</ol>
+<p style="text-align:center;margin:0 0 18px"><a class="btn sm" href="https://github.com/africaappstudio-max/video-context-ai-download/releases/latest/download/Install-Understand-This-Video-Windows.bat">Download for Windows</a></p>
+<video class="install-demo" autoplay muted loop playsinline poster="install-win.jpg" width="1120" height="720" aria-label="A short walk-through: download the Windows installer, click More info then Run anyway if Windows warns you, enter your license key, and see the All set message.">
+<source src="install-win.mp4" type="video/mp4">
+<source src="install-win.webm" type="video/webm">
+</video>
+<ol class="howto">
+<li>
+<div class="hrow"><span class="n">1</span><div><h3>Download and double-click</h3><p>Save the Windows installer, then double-click <b>Install Understand This Video (Windows).bat</b>.</p></div></div>
+<img src="install-win-1.webp" width="1400" height="900" loading="lazy" alt="The Windows Downloads folder with Install Understand This Video (Windows).bat selected, ready to double-click.">
+</li>
+<li>
+<div class="hrow"><span class="n">2</span><div><h3>If a warning appears</h3><p>Windows may show a blue box that says “Windows protected your PC”. Click <b>More info</b>, then click <b>Run anyway</b>. (If no box appears, skip this step.)</p></div></div>
+<div class="pair">
+<img src="install-win-2.webp" width="1400" height="900" loading="lazy" alt="Windows SmartScreen: Windows protected your PC, with a More info link and a Don't run button.">
+<img src="install-win-2b.webp" width="1400" height="900" loading="lazy" alt="The same warning after clicking More info, now showing a Run anyway link and a Don't run button.">
+</div>
+<p class="cap">Left: click More info. Right: click Run anyway.</p>
+</li>
+<li>
+<div class="hrow"><span class="n">3</span><div><h3>Paste your license key</h3><p>A box will ask for the key from your purchase email. Paste it and click OK. Leave the black window open while it works.</p></div></div>
+<img src="install-win-3.webp" width="1400" height="900" loading="lazy" alt="A box titled Understand This Video Plugin asking you to paste your license key, with Cancel and OK buttons.">
+</li>
+<li>
+<div class="hrow"><span class="n">4</span><div><h3>You're done</h3><p>When you see All set, close and reopen your AI app (Claude, Cursor or the one you use), then ask: <i>Understand this video for me</i> and the file name.</p></div></div>
+<img src="install-win-4.webp" width="1400" height="900" loading="lazy" alt="The success box: All set. Close and reopen your AI app, then ask it to understand a video.">
+</li>
+</ol>
+</div>
 </div>
 <p class="note small reveal" style="text-align:center;margin-top:24px">Using Grok Bot or another app, or something went wrong? See the <a href="help.html">help page</a>. Or email <a href="mailto:video@shipmonthly.com">video@shipmonthly.com</a>.</p>
 </div></section>
@@ -312,6 +426,58 @@ footer p{margin:8px 0}
 if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
 els.forEach(function(e){io.observe(e)});})();
+</script>
+
+<script>
+(function(){
+  var line = "curl -fsSL https://understandvideo.shipmonthly.com/install.sh | bash";
+  function selectOs(os){
+    document.querySelectorAll(".os-toggle button").forEach(function(b){
+      var on = b.getAttribute("data-os")===os;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    document.querySelectorAll(".os-panel").forEach(function(p){
+      if(p.getAttribute("data-os")===os){ p.hidden=false; var v=p.querySelector("video"); if(v){ v.currentTime=0; v.play().catch(function(){}); } }
+      else p.hidden=true;
+    });
+  }
+  document.querySelectorAll(".os-toggle button").forEach(function(b){
+    b.addEventListener("click", function(){ selectOs(b.getAttribute("data-os")); });
+  });
+  if(/windows/i.test(navigator.userAgent||"")) selectOs("win");
+
+  document.querySelectorAll(".copy").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var t = line;
+      var doOk = function(){ btn.textContent="Copied"; btn.classList.add("ok"); setTimeout(function(){ btn.textContent="Copy"; btn.classList.remove("ok"); }, 1800); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(t).then(doOk).catch(function(){ window.prompt("Copy this line:", t); });
+      } else { window.prompt("Copy this line:", t); }
+    });
+  });
+
+  function animatePipe(pipe){
+    var items = Array.prototype.slice.call(pipe.children);
+    var i = 0;
+    var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function paint(active){
+      items.forEach(function(li, idx){
+        li.classList.remove("done","active");
+        if(reduced || idx < active) li.classList.add("done");
+        else if(idx === active) li.classList.add("active");
+      });
+    }
+    if(reduced){ paint(items.length); return; }
+    function tick(){
+      paint(i);
+      i++;
+      if(i <= items.length){ setTimeout(tick, i===items.length ? 2200 : 1400); }
+      else { i = 0; setTimeout(tick, 600); }
+    }
+    tick();
+  }
+  document.querySelectorAll(".pipe").forEach(animatePipe);
+})();
 </script>
 </body>
 </html>
